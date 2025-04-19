@@ -145,18 +145,33 @@
 # print(out)
 
 
-Input = "A man a plan a canal Panama"
-listt = []
-for i in Input:
-    if i != " ":
-        listt.append(i.lower())
+# Input = "A man a plan a canal Panama"
+# listt = []
+# for i in Input:
+#     if i != " ":
+#         listt.append(i.lower())
+#
+# print(listt)
+# reverse = []
+#
+# for i in range(len(listt) - 1, -1, -1):
+#     reverse.append(listt[i])
+#
+# print(reverse)
+# reverse.clear()
+# listt.clear()
 
-print(listt)
-reverse = []
 
-for i in range(len(listt) - 1, -1, -1):
-    reverse.append(listt[i])
+def filterPrime(list):
+    primes = []
+    for num in list:
+        for i in range(2,num):
+            if num % i == 0 :
+                break
+        else:
+            primes.append(num)
+    return primes
+Input= [2, 4, 5, 6, 7, 9]
 
-print(reverse)
-reverse.clear()
-listt.clear()
+print(list(set(filterPrime(Input))))
+
