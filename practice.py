@@ -19,6 +19,7 @@
 #
 # student = {'name': 'John', 'age': 20}
 # print(student['name'])
+from django.db.models.lookups import StartsWith
 
 # a=30
 # b=20
@@ -51,8 +52,8 @@
 #              print(f"{{ {number} {secoundNumber} }}")
 #
 #
-# print(6 % 3)
-# print(6 // 3)
+print(6 % 3)
+print(6 // 3)
 # for i in range(3):
 #     print(i )
 
@@ -109,14 +110,14 @@
 #         # print(len(line))
 #         print(len(line.strip()))
 
-# dict={
-#     "name":"Chanura",
-#     "Age":22
-# }
-# dict["country"]="srilanaa"
-#
-# for key,value in dict.items():
-#     print(key,":",value)
+dict={
+    "name":"Chanura",
+    "Age":22
+}
+dict["country"]="srilanaa"
+
+for key,value in dict.items():
+    print(key,":",value)
 
 # Input= [1, 2, 2, 3, 4, 4, 5]
 # output=[]
@@ -162,16 +163,64 @@
 # listt.clear()
 
 
-def filterPrime(list):
-    primes = []
-    for num in list:
-        for i in range(2,num):
-            if num % i == 0 :
-                break
-        else:
-            primes.append(num)
-    return primes
-Input= [2, 4, 5, 6, 7, 9]
+# def filterPrime(list):
+#     primes = []
+#     for num in list:
+#         for i in range(2,num):
+#             if num % i == 0 :
+#                 break
+#         else:
+#             primes.append(num)
+#     return primes
+# Input= [2, 4, 5, 6, 7, 9]
+#
+# print(list(set(filterPrime(Input))))
 
-print(list(set(filterPrime(Input))))
+# listttt=[]
+# for num in range(1,101):
+#     if num%3==0 and num%5==0:
+#         listttt.append(num)
+# print(listttt)
 
+
+# with open("aa.txt","w") as file:
+#     file.writelines("hellow\nchanura\nheeheee\nhahahaha")
+#     file.writelines("hello world")
+# line=0
+# charactors=0
+# words=0
+# with open("aa.txt","r") as file:
+#     content=file.readlines()
+#     for lines in  content:
+#         print(lines)
+#         charactors+=len(lines)
+#         line+=1
+#
+#
+#
+#
+#
+# print(line)
+# print(charactors)
+# print(words)
+
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+#
+# print(factorial(5))
+
+
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+except ValueError:
+    print("Invalid input.")
+else:
+    print("Result is:", result)
+finally:
+    print("This always runs.")
